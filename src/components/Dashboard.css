@@ -1,0 +1,18 @@
+/* Estilo del contenedor principal del Dashboard */
+.dashboard-container {
+  background-image: url('../resources/dashboard_background.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta el tamaño para cubrir todo */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija el fondo */
+  width: 100vw; /* Ancho completo de la ventana */
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  justify-content: flex-start; /* Inicia desde la parte superior */
+  align-items: center; /* Centra horizontalmente */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina relleno */
+  color: white; /* Texto blanco por defecto */
+  position: relative; /* Necesario para el menú */
+  overflow: hidden; /* Evita scroll innecesario */
+}

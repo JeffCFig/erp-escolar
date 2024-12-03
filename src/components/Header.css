@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Agdasima", sans-serif;
+}
+
+/* Color Variables */
+:root {
+  --sidebar-bg: #2f323a;
+  --sidebar-width: 100px;
+  --sidebar-width-active: 250px;
+  --text-color: #fff;
+  --menu-item-color: rgb(188, 186, 186);
+  --menu-item-hover-bg: rgb(117, 109, 109);
+  --menu-item-hover-color: #fff;
+  --menu-header-color: rgb(137, 135, 135);
+  --tooltip-bg: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.5s ease;
+}
+
+.sidebar.active {
+  width: var(--sidebar-width-active);
+}
+
+.logo,
+.menu-item,
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: justify-content 0.5s ease;
+}
+
+.logo span,
+.menu-item span,
+.logout span {
+  margin-left: 10px;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.sidebar.active .logo span,
+.sidebar.active .menu-item span,
+.sidebar.active .logout span {
+  display: block;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-header {
+  color: var(--menu-header-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+
+.menu-item {
+  color: var(--menu-item-color);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  background: var(--menu-item-hover-bg);
+  color: var(--menu-item-hover-color);
+}
+
+.submenu {
+  margin-left: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submenu-item {
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--menu-item-color);
+  padding: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submenu-item:hover {
+  color: var(--menu-item-hover-color);
+  background-color: var(--menu-item-hover-bg);
+}
+
+.sidebar.active .submenu {
+  display: flex;
+}
+
+.logout {
+  cursor: pointer;
+  padding: 10px;
+  color: var(--menu-item-color);
+  text-align: center;
+}
+
+.logout:hover {
+  background: var(--menu-item-hover-bg);
+  color: var(--menu-item-hover-color);
+}
+
+.toggle-menu {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  background-color: var(--sidebar-bg);
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 1;
+  border: 1px solid var(--menu-item-hover-bg);
+}

@@ -1,0 +1,10 @@
+# Permitir acceso completo
+User-agent: *
+Disallow:
+
+# Excluir carpetas específicas (opcional)
+Disallow: /private/
+Disallow: /config/
+
+# Sitemap (si tienes uno)
+Sitemap: https://tu-dominio.com/sitemap.xml

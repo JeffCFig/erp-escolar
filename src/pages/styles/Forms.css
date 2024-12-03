@@ -1,0 +1,95 @@
+/* Contenedor del formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  background-color: #f5f5f5;
+}
+
+/* Estructura del formulario */
+.form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px; /* Aumentado el ancho máximo */
+}
+
+/* Título del formulario */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* Agrupación de cada campo en fila */
+.form-group {
+  display: flex;
+  justify-content: space-between; /* Espacio entre la etiqueta y el campo */
+  align-items: center; /* Alinear verticalmente el texto y el campo */
+  margin-bottom: 15px;
+}
+
+/* Estilo de las etiquetas */
+.form-group label {
+  font-weight: bold;
+  margin-right: 10px; /* Espacio a la derecha de la etiqueta */
+  color: #555;
+  flex-basis: 30%; /* La etiqueta ocupa el 30% del espacio */
+}
+
+/* Estilo de los campos de entrada (input, select, textarea) */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 65%; /* El campo de entrada ocupa el 65% */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo para cuando el campo está enfocado */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50; /* Cambio de color del borde al enfocar */
+}
+
+/* Botón de envío */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-button:hover {
+  background: #45a049;
+}
+
+/* Enlaces y texto auxiliar */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.form-footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}

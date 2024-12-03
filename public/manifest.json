@@ -1,0 +1,16 @@
+{
+    "short_name": "ERP Escolar",
+    "name": "ERP Escolar - Sistema de gestión académica",
+    "icons": [
+      {
+        "src": "l_system.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#4CAF50",
+    "background_color": "#ffffff"
+  }
+  
